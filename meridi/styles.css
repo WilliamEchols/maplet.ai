@@ -114,17 +114,44 @@ nav h1 {
     opacity: 0.9;
 }
 
-.app-store-button {
-    display: inline-block;
-    transition: transform 0.3s ease;
+.store-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.app-store-button:hover {
-    transform: translateY(-2px);
+.coming-soon-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.app-store-button {
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.app-store-button.coming-soon {
+    cursor: default;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transform: scale(0.98);
 }
 
 .app-store-button img {
     height: 45px;
+    display: block;
+}
+
+.app-store-button:not(.coming-soon):hover {
+    transform: translateY(-2px);
 }
 
 /* App Showcase */
