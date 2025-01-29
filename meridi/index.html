@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meridi - Time Zone Reminders Made Easy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <div class="container fade-in">
+                <img src="assets/AppIcon~ios-marketing.png" alt="Meridi App Icon" class="app-icon">
+                <h1>Meridi</h1>
+                <p class="lead">Create reminders across time zones with ease</p>
+                <a href="https://apps.apple.com/app/meridi" class="app-store-button">
+                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store">
+                </a>
+            </div>
+        </section>
+
+        <section class="app-showcase">
+            <div class="container">
+                <div class="screenshot-grid fade-in">
+                    <img src="assets/1.png" alt="Meridi App Screenshot 1" class="screenshot">
+                    <img src="assets/2.png" alt="Meridi App Screenshot 2" class="screenshot">
+                    <img src="assets/3.png" alt="Meridi App Screenshot 3" class="screenshot">
+                    <img src="assets/4.png" alt="Meridi App Screenshot 4" class="screenshot">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-list fade-in">
+                    <div class="feature">
+                        <h3>Intuitive Time Zone Conversion</h3>
+                        <p>See both local and destination time zones at a glance</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Beautiful Widgets</h3>
+                        <p>Keep your reminders visible with elegant home screen widgets</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Smart Scheduling</h3>
+                        <p>Set one-time or recurring reminders with drag-and-drop organization</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="support">
+            <div class="container">
+                <div class="support-content fade-in">
+                    <svg class="support-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                    </svg>
+                    <a href="mailto:meridi@maplet.ai" class="support-link">meridi@maplet.ai</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Fade in elements as they come into view
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html> 
