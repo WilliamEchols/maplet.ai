@@ -135,23 +135,15 @@ nav h1 {
 .app-store-button {
     display: inline-block;
     transition: all 0.3s ease;
-    position: relative;
 }
 
-.app-store-button.coming-soon {
-    cursor: default;
-    opacity: 0.6;
-    filter: grayscale(100%);
-    transform: scale(0.98);
+.app-store-button:hover {
+    transform: translateY(-2px);
 }
 
 .app-store-button img {
     height: 45px;
     display: block;
-}
-
-.app-store-button:not(.coming-soon):hover {
-    transform: translateY(-2px);
 }
 
 /* App Showcase */
